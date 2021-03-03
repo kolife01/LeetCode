@@ -13,9 +13,8 @@ var reverseWords = function(s) {
     let temp = []
     let array = s.split(' ')
     array.forEach(element => {
-      let words = element.split('')
-      words.reverse()
-      temp.push(words.join(''))
+      let reversed = element.split('').reverse()
+      temp.push(reversed.join(''))
     });
     return temp.join(' ')
 };
