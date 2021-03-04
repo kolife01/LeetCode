@@ -19,7 +19,7 @@ var isHappy = function(n) {
       number += Number(element) ** 2
     });
     if (history.includes(number)) return false;
-    history.push(number)
+    history.push(number);
   }
   return true
 };
