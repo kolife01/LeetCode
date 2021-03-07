@@ -12,14 +12,10 @@
  */
 var rotateString = function(A, B) {
     if(A.length !== B.length) return false
-    if(A.length === 0 && B.length === 0) return true
-    let stringB = B
+    if((A.length || B.length) === 0 ) return true
     for(let i = 0; i < B.length; i++){
-      let arrayB = stringB.split('')
-      arrayB.splice(B.length, 1, arrayB[0])
-      arrayB.splice(0, 1)
-      stringB = arrayB.join('')
-      if(A === stringB) return true
+      const replaced = B.slice(i).concat(B.slice(0, i))
+      if(replaced === A) return true
     }
     return false
 };
