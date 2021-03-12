@@ -10,11 +10,8 @@
  * @return {number[]}
  */
 var sortedSquares = function(nums) {
-    let result = []
-    nums.forEach(num => {
-      result.push(num * num)
-    })
-    result.sort((a, b) => a - b)
-    return result
+    nums = nums.map(num => num * num)
+    nums.sort((a, b) => a - b)
+    return nums
 };
 // @lc code=end
