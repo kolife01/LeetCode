@@ -10,11 +10,8 @@
  * @return {number}
  */
 var lengthOfLastWord = function(s) {
-  const array = s.split(' ')
-  for(let i = 1; i <= array.length; i++){
-    const n = array[array.length - i].length
-    if(n !== 0) return n
-  }
+  const array = s.trim().split(' ')
+  return array[array.length - 1].length
 };
 // @lc code=end
 
