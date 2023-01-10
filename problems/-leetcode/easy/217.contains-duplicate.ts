@@ -6,15 +6,15 @@
 
 // @lc code=start
 function containsDuplicate(nums: number[]): boolean {
-  const hashSet = []
-  return nums.some((num) => {
-    if(hashSet.includes(num as never)){
+  const hashSet: number[] = []
+  for(let i = 0; i < nums.length; i++ ) {
+    if(hashSet.includes(nums[i])){
       return true
     } else {
-      hashSet.push(num as never)
+      hashSet.push(nums[i])
     }
-    return false
-  })
+  }
+  return false
 };
 // @lc code=end
 
